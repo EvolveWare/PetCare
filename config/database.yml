@@ -4,7 +4,7 @@ default: &default
   timeout: 5000
   encoding: utf8mb4
   username: root
-  password: 123
+  password: 
 development:
   <<: *default
   database: petCare_development
