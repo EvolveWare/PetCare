@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pet: one
+  vaccine_name: MyString
+  date_administered: 2024-09-24
+  next_due_date: 2024-09-24
+
+two:
+  pet: two
+  vaccine_name: MyString
+  date_administered: 2024-09-24
+  next_due_date: 2024-09-24

@@ -1,19 +1,26 @@
 default: &default
   adapter: mysql2
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 25 } %>
-  timeout: 5000
-  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: 
+  password: 123
+  host: 127.0.0.1
+  port: 3306
+  timeout: 5000
+
 development:
   <<: *default
-  database: petCare_development
+  database: petCare_Development
+  encoding: utf8
+
 test:
   <<: *default
-  database: pet_Care_test
+  database: = petCare_Development
+  encoding: utf8
+
 production:
   <<: *default
-  host: <%= ENV.fetch("DATABASE_HOST") %>
-  database: <%= ENV.fetch("DATABASE_NAME") %>
-  username: <%= ENV.fetch("DATABASE_USERNAME") %>
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  database: petCare_Development
+  encoding: utf8
+  
+  
+  
